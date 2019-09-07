@@ -1,0 +1,8 @@
+﻿namespace ServicesAndRepos.Web.ViewModels.AddOrder
+{
+    public class AddOrderItemViewModel
+    {
+        public string Description { get; set; }
+        public int Count { get; set; }
+    }
+}

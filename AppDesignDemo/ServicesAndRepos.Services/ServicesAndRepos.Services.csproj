@@ -4,4 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ServicesAndRepos.DataAccess\ServicesAndRepos.DataAccess.csproj" />
+    <ProjectReference Include="..\ServicesAndRepos.Services.Interfaces\ServicesAndRepos.Services.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>
