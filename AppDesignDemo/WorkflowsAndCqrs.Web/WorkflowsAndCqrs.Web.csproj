@@ -10,4 +10,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WorkflowsAndCqrs.Integration.Database\WorkflowsAndCqrs.Integration.Database.csproj" />
+    <ProjectReference Include="..\WorkflowsAndCqrs.Integration.Email\WorkflowsAndCqrs.Integration.Email.csproj" />
+  </ItemGroup>
+
 </Project>

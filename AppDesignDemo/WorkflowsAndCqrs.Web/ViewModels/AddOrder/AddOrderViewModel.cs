@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ServicesAndRepos.Web.ViewModels.AddOrder
+namespace WorkflowsAndCqrs.Web.ViewModels.AddOrder
 {
     public class AddOrderViewModel
     {

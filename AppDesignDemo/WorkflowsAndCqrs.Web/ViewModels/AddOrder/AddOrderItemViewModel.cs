@@ -1,4 +1,4 @@
-﻿namespace ServicesAndRepos.Web.ViewModels.AddOrder
+﻿namespace WorkflowsAndCqrs.Web.ViewModels.AddOrder
 {
     public class AddOrderItemViewModel
     {
