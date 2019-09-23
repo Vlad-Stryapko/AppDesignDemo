@@ -1,6 +1,4 @@
 ### ServicesAndRepos
-#### Delta
-None
 #### Pros:
 1. Easy to understand and pick-up
 2. Offer some level of SoC via layers 

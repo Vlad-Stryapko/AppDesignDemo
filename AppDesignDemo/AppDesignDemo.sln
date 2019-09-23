@@ -5,30 +5,34 @@ VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F63CB47F-4E90-4835-86A7-0B7EB289C61F}"
 	ProjectSection(SolutionItems) = preProject
-		presentation.md = presentation.md
+		001 Intro.md = 001 Intro.md
+		002 Services and repos.md = 002 Services and repos.md
+		003 Mediatr and Cqrs.md = 003 Mediatr and Cqrs.md
+		004 Workflow and Cqrs.md = 004 Workflow and Cqrs.md
+		005 Summary.md = 005 Summary.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServicesAndRepos", "ServicesAndRepos", "{8F9D30AF-D04F-458F-AE1D-4E1BC9CE2BAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesAndRepos.Web", "ServicesAndRepos.Web\ServicesAndRepos.Web.csproj", "{B3F57F6F-9EC3-40BC-B4C0-8388855441CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServicesAndRepos.Web", "ServicesAndRepos.Web\ServicesAndRepos.Web.csproj", "{B3F57F6F-9EC3-40BC-B4C0-8388855441CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesAndRepos.Services.Interfaces", "ServicesAndRepos.Services.Interfaces\ServicesAndRepos.Services.Interfaces.csproj", "{F0614349-BE28-43B8-AC5D-C1E73A8957F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServicesAndRepos.Services.Interfaces", "ServicesAndRepos.Services.Interfaces\ServicesAndRepos.Services.Interfaces.csproj", "{F0614349-BE28-43B8-AC5D-C1E73A8957F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesAndRepos.Services", "ServicesAndRepos.Services\ServicesAndRepos.Services.csproj", "{E8F354F4-52CB-431B-8772-631E11D9DB6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServicesAndRepos.Services", "ServicesAndRepos.Services\ServicesAndRepos.Services.csproj", "{E8F354F4-52CB-431B-8772-631E11D9DB6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesAndRepos.DataAccess.EntityFramework", "ServicesAndRepos.DataAccess.EntityFramework\ServicesAndRepos.DataAccess.EntityFramework.csproj", "{2A63F036-6343-47E9-8DB1-43CBBF7428A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServicesAndRepos.DataAccess.EntityFramework", "ServicesAndRepos.DataAccess.EntityFramework\ServicesAndRepos.DataAccess.EntityFramework.csproj", "{2A63F036-6343-47E9-8DB1-43CBBF7428A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesAndRepos.DataAccess", "ServicesAndRepos.DataAccess\ServicesAndRepos.DataAccess.csproj", "{19F3CFE7-9464-4C9B-99A6-0D27CE7B9402}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServicesAndRepos.DataAccess", "ServicesAndRepos.DataAccess\ServicesAndRepos.DataAccess.csproj", "{19F3CFE7-9464-4C9B-99A6-0D27CE7B9402}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesAndRepos.Domain", "ServicesAndRepos.Domain\ServicesAndRepos.Domain.csproj", "{E1A93367-01EC-4A93-8F8A-138181396F36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServicesAndRepos.Domain", "ServicesAndRepos.Domain\ServicesAndRepos.Domain.csproj", "{E1A93367-01EC-4A93-8F8A-138181396F36}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WorkflowAndCqrs", "WorkflowAndCqrs", "{FFF32BAD-7D7A-4913-BE28-8CB7C05B52C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowsAndCqrs.Web", "WorkflowsAndCqrs.Web\WorkflowsAndCqrs.Web.csproj", "{606000A1-494F-471C-804B-3D26FA3827D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkflowsAndCqrs.Web", "WorkflowsAndCqrs.Web\WorkflowsAndCqrs.Web.csproj", "{606000A1-494F-471C-804B-3D26FA3827D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowsAndCqrs.Integration.Database", "WorkflowsAndCqrs.Integration.Database\WorkflowsAndCqrs.Integration.Database.csproj", "{F78A1710-5705-4305-A72D-B85D775DA539}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkflowsAndCqrs.Integration.Database", "WorkflowsAndCqrs.Integration.Database\WorkflowsAndCqrs.Integration.Database.csproj", "{F78A1710-5705-4305-A72D-B85D775DA539}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowsAndCqrs.Integration.Email", "WorkflowsAndCqrs.Integration.Email\WorkflowsAndCqrs.Integration.Email.csproj", "{73CE67C5-AD09-44D4-99DC-BC8F17C875FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkflowsAndCqrs.Integration.Email", "WorkflowsAndCqrs.Integration.Email\WorkflowsAndCqrs.Integration.Email.csproj", "{73CE67C5-AD09-44D4-99DC-BC8F17C875FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
