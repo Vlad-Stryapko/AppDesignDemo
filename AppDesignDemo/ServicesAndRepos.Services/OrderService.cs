@@ -14,6 +14,12 @@ namespace ServicesAndRepos.Services
         private readonly IEmailService emailService;
         private readonly IUnitOfWork unitOfWork;
 
+        public OrderService(IEmailService emailService, IUnitOfWork unitOfWork)
+        {
+            this.emailService = emailService;
+            this.unitOfWork = unitOfWork;
+        }
+
         public async Task AddOrderAsync(AddOrderServiceModel order)
         {
             this.unitOfWork.OrderRepository.AddOrder(new Domain.Order
@@ -30,9 +36,13 @@ namespace ServicesAndRepos.Services
             await this.emailService.SendAsync(new object());            
         }
 
-        public Task<GetOrderServiceModel> GetOrderAsync(int id)
+        public async Task<GetTotalServiceModel> GetTotalAsync(string description)
         {
-            throw new NotImplementedException();
+            var total = await unitOfWork.OrderRepository.GetTotalAsync(description);
+            return new GetTotalServiceModel
+            {
+                TotalCount = total.TotalCount
+            };
         }
     }
 }

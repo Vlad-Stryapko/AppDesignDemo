@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using ServicesAndRepos.DataAccess.Models;
 using ServicesAndRepos.Domain;
 
 namespace ServicesAndRepos.DataAccess.EntityFramework
@@ -20,9 +23,13 @@ namespace ServicesAndRepos.DataAccess.EntityFramework
             this.context.Orders.Add(order);
         }
 
-        public Order GetOrder(int id)
+        public async Task<OrderTotal> GetTotalAsync(string description)
         {
-            return this.context.Orders.Single(_ => _.Id == id);
+            var total = await context.OrderItems.Where(_ => _.Description == description).SumAsync(_ => _.Count);
+            return new OrderTotal
+            {
+                TotalCount = total
+            };
         }
     }
 }

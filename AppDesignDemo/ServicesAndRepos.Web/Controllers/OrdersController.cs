@@ -23,20 +23,16 @@ namespace ServicesAndRepos.Web.Controllers
             this.orderService = orderService;
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<GetOrderViewModel>> Get(int id)
+        [HttpGet("{description}/total")]
+        public async Task<ActionResult<GetTotalViewModel>> Get(string description)
         {
-            var order = await orderService.GetOrderAsync(id);
             //Mapping should ideally be separated but it's out of scope for this demo 
             //N.B. AutoMapper can be harmful
-            var viewModel = new GetOrderViewModel
+            var total = await orderService.GetTotalAsync(description);
+            var viewModel = new GetTotalViewModel
             {
-                OrderedOn = order.OrderedOn,
-                OrderItems = order.OrderItems.Select(_ => new GetOrderItemViewModel
-                {
-                    Count = _.Count,
-                    Description = _.Description
-                }).ToList()
+                Description = description,
+                TotalCount = total.TotalCount
             };
             return Ok(viewModel);
         }
