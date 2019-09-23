@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace WorkflowsAndCqrs.Integration.Email
 {
@@ -12,7 +11,8 @@ namespace WorkflowsAndCqrs.Integration.Email
     {
         public Task ExecuteAsync(object obj)
         {
-            throw new NotImplementedException();
+            System.Diagnostics.Debug.WriteLine("Email has been sent");
+            return Task.CompletedTask;
         }
     }
 }

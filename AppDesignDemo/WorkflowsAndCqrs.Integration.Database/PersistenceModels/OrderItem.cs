@@ -1,4 +1,4 @@
-﻿namespace ServicesAndRepos.Domain
+﻿namespace WorkflowsAndCqrs.Integration.Database.PersistenceModels
 {
     public class OrderItem
     {

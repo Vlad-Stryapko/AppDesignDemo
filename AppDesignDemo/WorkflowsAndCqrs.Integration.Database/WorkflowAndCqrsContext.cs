@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ServicesAndRepos.Domain;
+using WorkflowsAndCqrs.Integration.Database.PersistenceModels;
 
-namespace ServicesAndRepos.DataAccess.EntityFramework
+namespace WorkflowsAndCqrs.Integration.Database
 {
-    public class ServicesAndReposContext : DbContext
+    public class WorkflowAndCqrsContext : DbContext
     {
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }

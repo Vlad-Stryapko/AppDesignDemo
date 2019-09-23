@@ -20,39 +20,32 @@ namespace WorkflowsAndCqrs.Web.Controllers
             this.makeOrderWorkflow = makeOrderWorkflow;
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<GetOrderViewModel>> Get(int id)
-        {
-            //var order = await orderService.GetOrderAsync(id);
-            ////Mapping should ideally be separated but it's out of scope for this demo 
-            ////N.B. AutoMapper can be harmful
-            //var viewModel = new GetOrderViewModel
-            //{
-            //    OrderedOn = order.OrderedOn,
-            //    OrderItems = order.OrderItems.Select(_ => new GetOrderItemViewModel
-            //    {
-            //        Count = _.Count,
-            //        Description = _.Description
-            //    }).ToList()
-            //};
-            //return Ok(viewModel);
-            return Ok();
-        }
+        //[HttpGet("{description}/total")]
+        //public async Task<ActionResult<GetTotalViewModel>> Get(string description)
+        //{
+        //    //Mapping should ideally be separated but it's out of scope for this demo 
+        //    //N.B. AutoMapper can be harmful
+        //    var total = await orderService.GetTotalAsync(description);
+        //    var viewModel = new GetTotalViewModel
+        //    {
+        //        Description = description,
+        //        TotalCount = total.TotalCount
+        //    };
+        //    return Ok(viewModel);
+        //}
 
         [HttpPost]
         public async Task<ActionResult> Post(AddOrderViewModel order)
         {
             //Mapping should ideally be separated but it's out of scope for this demo 
             //N.B. AutoMapper can be harmful
-            var input = new IMakeOrderWorkflowInput
+            var input = new MakeOrderWorkflowInput
                 (
-                    orderedBy: User.Identity.Name,
                     orderItems: order.OrderItems.Select
                     (
-                        _ => new IMakeOrderWorkflowInput.OrderItem(description: _.Description, count: _.Count)
+                        _ => new MakeOrderWorkflowInput.OrderItem(description: _.Description, count: _.Count)
                     ).ToList()
                 );
-           
             await this.makeOrderWorkflow.ExecuteAsync(input);
             return Ok();
         }

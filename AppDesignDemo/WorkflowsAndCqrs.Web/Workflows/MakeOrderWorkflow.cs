@@ -18,27 +18,33 @@ namespace WorkflowsAndCqrs.Web.Workflows
             this.sendEmailCommand = sendEmailCommand;
         }
 
-        public async Task ExecuteAsync(IMakeOrderWorkflowInput input)
+        public async Task ExecuteAsync(MakeOrderWorkflowInput input)
         {
-            await this.addOrderCommand.ExecuteAsync(new AddOrderCommandInput());
+            await this.addOrderCommand.ExecuteAsync(new AddOrderCommandInput
+                (
+                    orderedOn: DateTime.UtcNow,
+                    orderItems: input.OrderItems.Select(_ => new AddOrderCommandInput.OrderItem
+                    (
+                        description: _.Description,
+                        count: _.Count
+                    )).ToList()
+                ));
             await this.sendEmailCommand.ExecuteAsync(new object());
         }
     }
 
     public interface IMakeOrderWorkflow
     {
-        Task ExecuteAsync(IMakeOrderWorkflowInput input);
+        Task ExecuteAsync(MakeOrderWorkflowInput input);
     }
 
-    public sealed class IMakeOrderWorkflowInput
+    public sealed class MakeOrderWorkflowInput
     {
-        public IMakeOrderWorkflowInput(string orderedBy, ICollection<OrderItem> orderItems)
-        {
-            this.OrderedBy = orderedBy;
+        public MakeOrderWorkflowInput(ICollection<OrderItem> orderItems)
+        { 
             this.OrderItems = orderItems;
         }
 
-        public string OrderedBy { get; }
         public ICollection<OrderItem> OrderItems { get; }
 
         public sealed class OrderItem
