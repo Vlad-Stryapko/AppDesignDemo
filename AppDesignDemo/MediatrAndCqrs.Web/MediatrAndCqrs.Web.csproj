@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Application\Commands\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\MediatrAndCqrs.Infrastructure\MediatrAndCqrs.Infrastructure.csproj" />
   </ItemGroup>
 
