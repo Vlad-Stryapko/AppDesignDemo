@@ -1,4 +1,5 @@
-﻿using ServicesAndRepos.DataAccess;
+﻿using Serilog;
+using ServicesAndRepos.DataAccess;
 using ServicesAndRepos.Services.Interfaces.Emails;
 using ServicesAndRepos.Services.Interfaces.Orders;
 using ServicesAndRepos.Services.Interfaces.Orders.Models;
@@ -20,8 +21,11 @@ namespace ServicesAndRepos.Services
             this.unitOfWork = unitOfWork;
         }
 
-        public async Task AddOrderAsync(AddOrderServiceModel order)
+        public async Task MakeOrderAsync(AddOrderServiceModel order)
         {
+            Log.Information("Make order service method has been called");
+
+            Log.Information("Order will be saved to the database");
             this.unitOfWork.OrderRepository.AddOrder(new Domain.Order
             {
                 OrderedOn = DateTime.UtcNow,
@@ -32,8 +36,10 @@ namespace ServicesAndRepos.Services
                 }).ToList()
             });
             await this.unitOfWork.SaveChangesAsync();
+            Log.Information("Order has been saved");
 
-            await this.emailService.SendAsync(new object());            
+            await this.emailService.SendAsync(new object());
+            Log.Information("Make order service method has finished");
         }
 
         public async Task<GetTotalServiceModel> GetTotalAsync(string description)

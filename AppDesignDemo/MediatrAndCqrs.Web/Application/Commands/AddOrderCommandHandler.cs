@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using MediatrAndCqrs.Domain.Model;
 using MediatrAndCqrs.Domain.Model.Order;
+using Serilog;
 using System;
 using System.Linq;
 using System.Threading;
@@ -19,9 +20,11 @@ namespace MediatrAndCqrs.Web.Application.Commands
 
         protected override async Task Handle(AddOrderCommand request, CancellationToken cancellationToken)
         {
+            Log.Information("Order will be saved to the database");
             var order = new OrderAggregate(DateTime.UtcNow, orderItems: request.OrderItems.Select(ToOrderItem).ToList());
             orderRepository.AddOrder(order);
             await orderRepository.UnitOfWork.SaveChangesAsync(cancellationToken);
+            Log.Information("Order has been saved");
 
             OrderItem ToOrderItem(AddOrderCommand.AddOrderItemModel source) => new OrderItem(source.Count, source.Description);
         }

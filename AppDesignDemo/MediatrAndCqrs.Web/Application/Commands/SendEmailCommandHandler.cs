@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Serilog;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -8,7 +9,9 @@ namespace MediatrAndCqrs.Web.Application.Commands
     {
         protected override Task Handle(SendEmailCommand request, CancellationToken cancellationToken)
         {
-            System.Diagnostics.Debug.WriteLine("Email has been sent");
+            Log.Information("Email will be sent");
+            //some actual work
+            Log.Information("Email has been sent");
             return Task.CompletedTask;
         }
     }

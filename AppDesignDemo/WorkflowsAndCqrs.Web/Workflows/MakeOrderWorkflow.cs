@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Serilog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace WorkflowsAndCqrs.Web.Workflows
 
         public async Task ExecuteAsync(MakeOrderWorkflowInput input)
         {
+            Log.Information("MakeOrder workflow has been started");
             await this.addOrderCommand.ExecuteAsync(new AddOrderCommandInput
                 (
                     orderedOn: DateTime.UtcNow,
@@ -30,6 +32,7 @@ namespace WorkflowsAndCqrs.Web.Workflows
                     )).ToList()
                 ));
             await this.sendEmailCommand.ExecuteAsync(new object());
+            Log.Information("MakeOrder workflow has finished");
         }
     }
 

@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Serilog" Version="2.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ServicesAndRepos.DataAccess\ServicesAndRepos.DataAccess.csproj" />
     <ProjectReference Include="..\ServicesAndRepos.Services.Interfaces\ServicesAndRepos.Services.Interfaces.csproj" />
   </ItemGroup>

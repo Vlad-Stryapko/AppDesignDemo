@@ -6,7 +6,7 @@ namespace ServicesAndRepos.Services.Interfaces.Orders
 {
     public interface IOrderService
     {
-        Task AddOrderAsync(AddOrderServiceModel order);
+        Task MakeOrderAsync(AddOrderServiceModel order);
 
         Task<GetTotalServiceModel> GetTotalAsync(string description);
     }

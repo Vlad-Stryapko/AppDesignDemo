@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MediatR;
+using MediatrAndCqrs.Web.Application.Commands;
 using MediatrAndCqrs.Web.Application.Queries;
 using MediatrAndCqrs.Web.Contracts.AddOrder;
 using MediatrAndCqrs.Web.Contracts.GetTotal;
@@ -33,16 +34,14 @@ namespace MediatrAndCqrs.Web.Controllers
         [HttpPost]
         public async Task<ActionResult> Post(AddOrderRequest order)
         {
-            //var serviceModel = new AddOrderServiceModel
-            //{
-            //    OrderItems = order.OrderItems.Select(_ => new AddOrderItemServiceModel
-            //    {
-            //        Count = _.Count,
-            //        Description = _.Description
-            //    })
-            //};
-            //await this.orderService.AddOrderAsync(serviceModel);
+            await mediator.Send(new MakeOrderCommand { OrderItems = order.OrderItems.Select(ToOrderItem).ToList() });
             return Ok();
+
+            MakeOrderCommand.AddOrderItemModel ToOrderItem(AddOrderItemContract source) => new MakeOrderCommand.AddOrderItemModel
+            {
+                Count = source.Count,
+                Description = source.Description
+            };
         }
     }
 }

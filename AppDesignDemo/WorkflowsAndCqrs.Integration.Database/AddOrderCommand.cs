@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Serilog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace WorkflowsAndCqrs.Integration.Database
 
         public async Task ExecuteAsync(AddOrderCommandInput input)
         {
+            Log.Information("Order will be saved to the database");
             var order = new PersistenceModels.Order
             {
                 OrderedOn = input.OrderedOn,
@@ -27,6 +29,7 @@ namespace WorkflowsAndCqrs.Integration.Database
             };
 
             await context.SaveChangesAsync();
+            Log.Information("Order has been saved");
         }
     }
 

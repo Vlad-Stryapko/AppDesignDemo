@@ -1,4 +1,5 @@
-﻿using ServicesAndRepos.Services.Interfaces.Emails;
+﻿using Serilog;
+using ServicesAndRepos.Services.Interfaces.Emails;
 using System.Threading.Tasks;
 
 namespace ServicesAndRepos.Services
@@ -7,7 +8,9 @@ namespace ServicesAndRepos.Services
     {
         public Task SendAsync(object obj)
         {
-            System.Diagnostics.Debug.WriteLine("Email has been sent");
+            Log.Information("Email will be sent");
+            //some actual work
+            Log.Information("Email has been sent");
             return Task.CompletedTask;
         }
     }

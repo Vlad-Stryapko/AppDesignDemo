@@ -50,7 +50,7 @@ namespace ServicesAndRepos.Web.Controllers
                     Description = _.Description
                 })
             };
-            await this.orderService.AddOrderAsync(serviceModel);
+            await this.orderService.MakeOrderAsync(serviceModel);
             return Ok();
         }
     }

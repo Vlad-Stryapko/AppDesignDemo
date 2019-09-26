@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using Serilog;
+using System.Threading.Tasks;
 
 namespace WorkflowsAndCqrs.Integration.Email
 {
@@ -11,7 +12,9 @@ namespace WorkflowsAndCqrs.Integration.Email
     {
         public Task ExecuteAsync(object obj)
         {
-            System.Diagnostics.Debug.WriteLine("Email has been sent");
+            Log.Information("Email will be sent");
+            //some actual work
+            Log.Information("Email has been sent");
             return Task.CompletedTask;
         }
     }
