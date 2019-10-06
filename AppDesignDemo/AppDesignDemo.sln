@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		005 Summary.md = 005 Summary.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServicesAndRepos", "ServicesAndRepos", "{8F9D30AF-D04F-458F-AE1D-4E1BC9CE2BAE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "002 ServicesAndRepos", "002 ServicesAndRepos", "{8F9D30AF-D04F-458F-AE1D-4E1BC9CE2BAE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServicesAndRepos.Web", "ServicesAndRepos.Web\ServicesAndRepos.Web.csproj", "{B3F57F6F-9EC3-40BC-B4C0-8388855441CF}"
 EndProject
@@ -26,7 +26,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServicesAndRepos.DataAccess
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServicesAndRepos.Domain", "ServicesAndRepos.Domain\ServicesAndRepos.Domain.csproj", "{E1A93367-01EC-4A93-8F8A-138181396F36}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WorkflowAndCqrs", "WorkflowAndCqrs", "{FFF32BAD-7D7A-4913-BE28-8CB7C05B52C9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "004 WorkflowAndCqrs", "004 WorkflowAndCqrs", "{FFF32BAD-7D7A-4913-BE28-8CB7C05B52C9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkflowsAndCqrs.Web", "WorkflowsAndCqrs.Web\WorkflowsAndCqrs.Web.csproj", "{606000A1-494F-471C-804B-3D26FA3827D3}"
 EndProject
@@ -34,7 +34,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkflowsAndCqrs.Integratio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkflowsAndCqrs.Integration.Email", "WorkflowsAndCqrs.Integration.Email\WorkflowsAndCqrs.Integration.Email.csproj", "{73CE67C5-AD09-44D4-99DC-BC8F17C875FD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MediatrAndCqrs", "MediatrAndCqrs", "{43D3F152-12A3-47E9-91D1-CB2AD92C54C0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "003 MediatrAndCqrs", "003 MediatrAndCqrs", "{43D3F152-12A3-47E9-91D1-CB2AD92C54C0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatrAndCqrs.Web", "MediatrAndCqrs.Web\MediatrAndCqrs.Web.csproj", "{1152A773-3339-433A-9F64-66AC6B8A7F82}"
 EndProject
