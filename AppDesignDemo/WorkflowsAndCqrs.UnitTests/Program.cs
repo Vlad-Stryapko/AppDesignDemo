@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using WorkflowsAndCqrs.Web.Workflows;
 
 namespace WorkflowsAndCqrs.UnitTests
 {
@@ -7,12 +8,8 @@ namespace WorkflowsAndCqrs.UnitTests
     {
         static void Main(string[] args)
         {
-            ExampleTest().Wait();
-        }
-
-        private static async Task ExampleTest()
-        {
             //Try to write a UT similar to MediatR
+            //var flow = new MakeOrderWorkflow();
         }
     }
 }

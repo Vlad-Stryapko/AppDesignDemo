@@ -1,3 +1,7 @@
+### Quick about 
+Vlad Stryapko
+.NET developer, interested in functional programming, type systems and type-driven development 
+
 ### Why does design matter?
 1. Reasoning about the code 
 2. Common code structure across the service(s)
@@ -5,8 +9,8 @@
 4. It might be just fun
 5. etc
 
-### Current state of art
-1. Basic OOP appraches
-2. DDD, event-driven approaches
-3. FP, free monads, explicit IO 
-4. Good old spaghetti 
+### Goals
+1. Be explicit about what is done in the module 
+2. Understand the idea (at a high level) only by the signature - we're too lazy to read the code 
+3. Easy to debug 
+4. Easy to write even for junior-level developers

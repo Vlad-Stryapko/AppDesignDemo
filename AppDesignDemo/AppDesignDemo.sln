@@ -42,9 +42,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatrAndCqrs.Domain", "Me
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatrAndCqrs.Infrastructure", "MediatrAndCqrs.Infrastructure\MediatrAndCqrs.Infrastructure.csproj", "{08F8FA2C-3BDB-481E-A8D7-407149C8935D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatrAndCqrs.UnitTests", "MediatrAndCqrs.UnitTests\MediatrAndCqrs.UnitTests.csproj", "{4403FB95-6C0B-4320-B7EF-482BA7FD4A7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatrAndCqrs.UnitTests", "MediatrAndCqrs.UnitTests\MediatrAndCqrs.UnitTests.csproj", "{4403FB95-6C0B-4320-B7EF-482BA7FD4A7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowsAndCqrs.UnitTests", "WorkflowsAndCqrs.UnitTests\WorkflowsAndCqrs.UnitTests.csproj", "{58E0B5A1-920F-4A35-A790-154801D23B3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkflowsAndCqrs.UnitTests", "WorkflowsAndCqrs.UnitTests\WorkflowsAndCqrs.UnitTests.csproj", "{58E0B5A1-920F-4A35-A790-154801D23B3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -9,12 +9,7 @@ namespace MediatrAndCqrs.UnitTests
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            ExampleTest().Wait();
-        }
-
-        private static async Task ExampleTest()
+        static async Task Main(string[] args)
         {
             //Discuss what happens
             var mediatrMock = new Mock<IMediator>();
